@@ -48,20 +48,18 @@ def main():
             try:
                 str_to_count = input("What is the text to count?\n")
                 if not str_to_count:
-                    raise AssertionError("AssertionError: entered an empty \
-                                         string")
+                    raise AssertionError("entered an empty string")
             except EOFError:
-                raise AssertionError("AssertionError: entered an empty string")
+                raise AssertionError("entered an empty string")
         elif len(sys.argv) == 2:
             str_to_count = sys.argv[1]
         else:
-            raise AssertionError("AssertionError: more than one argument is \
-                                 provided")
+            raise AssertionError("more than one argument is provided")
 
         count_char(str_to_count)
 
     except AssertionError as e:
-        print(e)
+        print(f"AssertionError: {e}")
 
 
 if __name__ == "__main__":

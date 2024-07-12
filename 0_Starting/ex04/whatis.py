@@ -13,10 +13,9 @@ try:
         try:
             num = int(sys.argv[1])
         except ValueError:
-            raise AssertionError("AssertionError: argument is not an integer")
+            raise AssertionError("argument is not an integer")
         ft_calculate(num)
     elif len(sys.argv) > 2:
-        raise AssertionError("AssertionError: more than \
-one argument is provided")
+        raise AssertionError("more than one argument is provided")
 except AssertionError as e:
-    print(e)
+    print(f"AssertionError: {e}")
