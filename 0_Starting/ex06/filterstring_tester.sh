@@ -53,13 +53,13 @@ python3 filterstring.py "The permanent dentition is composed of 32 teeth" 8
 echo
 
 echo "----------------------------------------------------------------------"
-echo -e "${B_RED}CASE 9:${NC} testing filterstring.py with ${RED}an empty string and 0${NC}"
+echo -e "${B_RED}CASE 9:${NC} testing filterstring.py with ${RED}\"Hello      World\" 3${NC}"
 echo "----------------------------------------------------------------------"
-python3 filterstring.py "" 8
+python3 filterstring.py "Hello      world" 3
 echo
 
 echo "----------------------------------------------------------------------"
 echo -e "${B_RED}CASE 10:${NC} testing filterstring.py with ${RED}an empty string and 200${NC}"
 echo "----------------------------------------------------------------------"
-python3 filterstring.py "" 8
+python3 filterstring.py "" 200
 echo
