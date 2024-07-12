@@ -4,7 +4,6 @@ def NULL_not_found(object: any) -> int:
         int(0): "Zero",
         '': "Empty",
     }
-
     o_type = type(object)
 
     if o_type is float and object != object:
