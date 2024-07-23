@@ -9,9 +9,9 @@ def load(path: str) -> pd.DataFrame:
     '''
     try:
         if path[-4:] != ".csv":
-            raise AssertionError("file format not accepted")
+            raise AssertionError("File format not supported.")
         if not os.path.exists(path):
-            raise AssertionError(f"{path}: no such file")
+            raise AssertionError(f"{path}: no such file.")
 
         data = pd.read_csv(path)
         print(f"Loading dataset of dimensions {data.shape}")
