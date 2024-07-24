@@ -1,6 +1,3 @@
-import sys
-
-
 class calculator:
     '''
     [CALCULATOR] A class able to perform arithmetic operations.
@@ -49,8 +46,10 @@ class calculator:
         the division of the vector by a scalar. Prints an error if
         division by zero is attempted.
         '''
-        if object == 0:
-            print("ZeroDivisionError: Cannot divide by zero.")
-            sys.exit(1)
-        self._vector = [num / object for num in self._vector]
-        print(self._vector)
+        try:
+            if object == 0:
+                raise ZeroDivisionError("Cannot divide by zero.")
+            self._vector = [num / object for num in self._vector]
+            print(self._vector)
+        except ZeroDivisionError as e:
+            print(f"ZeroDivisionError: {e}")
